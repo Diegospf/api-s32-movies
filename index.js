@@ -16,6 +16,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Rotas
+app.get("/", (req, res) => {
+  return res.json('Hello world!');
+})
 app.use('/user', userRoutes);
 app.use('/s32list', s32listRoutes);
 app.use('/mylist', mylistRoutes);
